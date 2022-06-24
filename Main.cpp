@@ -627,3 +627,409 @@ void sceenario2()
 
 
     /**-------------tree2---------------**/
+     /**-------------tree2---------------**/
+
+    glPushMatrix();
+    glTranslatef(-mm, 0, 0);
+    glColor3f(.1,0.2,.1);
+    glTranslatef(250, 0, 0);
+    glBegin(GL_POLYGON);
+        glVertex2i(72,300);
+        glVertex2i(78,300);
+        glVertex2i(78,405);
+        glVertex2i(72,405);
+    glEnd();
+
+    glColor3f(.1,0.5,.1);
+    glBegin(GL_POLYGON);
+        glVertex2i(75,450);
+        glVertex2i(100,390);
+        glVertex2i(50,390);
+
+    glEnd();
+    glBegin(GL_POLYGON);
+        glVertex2i(75,420);
+        glVertex2i(100,360);
+        glVertex2i(50,360);
+
+    glEnd();
+    glBegin(GL_POLYGON);
+        glVertex2i(75,400);
+        glVertex2i(100,340);
+        glVertex2i(50,340);
+
+    glEnd();
+    glPopMatrix();
+
+
+    /**-------------tree3---------------**/
+    glPushMatrix();
+    glColor3f(.1,0.2,.1);
+    glTranslatef(150-mm, 150, 0);
+    glScalef(.5,.5,.5);
+    glBegin(GL_POLYGON);
+        glVertex2i(72,300);
+        glVertex2i(78,300);
+        glVertex2i(78,405);
+        glVertex2i(72,405);
+    glEnd();
+
+    glColor3f(.1,0.5,0.1);
+    glBegin(GL_POLYGON);
+        glVertex2i(75,450);
+        glVertex2i(100,390);
+        glVertex2i(50,390);
+
+    glEnd();
+    glBegin(GL_POLYGON);
+        glVertex2i(75,420);
+        glVertex2i(100,360);
+        glVertex2i(50,360);
+
+    glEnd();
+    glBegin(GL_POLYGON);
+        glVertex2i(75,400);
+        glVertex2i(100,340);
+        glVertex2i(50,340);
+
+    glEnd();
+
+
+    glPopMatrix();
+
+
+}
+
+void my_control_func()
+{
+    counter++;
+    if(counter>16800||counter<3800)
+    {
+        m=m;
+        mm=mm;
+        mount=mount;
+        //hare();
+    }
+    else{
+    mount+=.2;
+    if(flag>-800){
+    m-=.2;
+    flag-=.2;
+    }
+    else{
+    m=350;
+    flag=700;
+
+    F++;
+    }
+    if(flag2>-1200)
+    {
+    mm-=.2;
+    flag2-=.2;
+    }
+    else
+    {
+        mm=350;
+        flag2=700;
+    }
+    if (F==2)
+    {
+        b2_speed=10;
+    }
+    }
+}
+
+
+
+void starting()
+{
+    /**sinboard**/
+    glColor3f(.7,0.1,0.7);
+    glPushMatrix();
+    glTranslatef(200-m, 00, 0);
+    glBegin(GL_POLYGON);
+        glVertex2i(10,20);
+        glVertex2i(40,20);
+        glVertex2i(40,300);
+        glVertex2i(10,300);
+    glEnd();
+    glPopMatrix();
+
+}
+
+void victory()
+{
+    /**Victory sinboard**/
+    glColor3f(.7,0.1,0.7);
+    glPushMatrix();
+    glTranslatef(300-m, 25, 0);
+    glBegin(GL_POLYGON);
+        glVertex2i(10,100);
+        glVertex2i(40,50);
+        glVertex2i(40,250);
+        glVertex2i(10,300);
+    glEnd();
+    glPopMatrix();
+    /**pole 1**/
+    glColor3f(.7,0.1,0.7);
+    glPushMatrix();
+    glTranslatef(300-m, 0, 0);
+    glBegin(GL_POLYGON);
+        glVertex2i(10,360);
+        glVertex2i(50,290);
+        glVertex2i(50,300);
+        glVertex2i(10,370);
+    glEnd();
+    glPopMatrix();
+    /**Pole 2**/
+    glColor3f(.7,0.1,0.7);
+    glPushMatrix();
+    glTranslatef(300-m, -270, 0);
+    glBegin(GL_POLYGON);
+        glVertex2i(10,360);
+        glVertex2i(50,290);
+        glVertex2i(50,300);
+        glVertex2i(10,370);
+    glEnd();
+    glPopMatrix();
+    /**Rope1**/
+    glColor3f(.7,0.9,0.7);
+    glPushMatrix();
+    glTranslatef(300-m, 0, 0);
+    glBegin(GL_LINE_LOOP);
+        glVertex2i(10,360);
+        glVertex2i(10,325);
+        glVertex2i(40,275);
+        glVertex2i(50,290);
+    glEnd();
+    glPopMatrix();
+    /** Rope 2 **/
+        glColor3f(.7,0.9,0.7);
+    glPushMatrix();
+    glTranslatef(300-m, -260, 0);
+    glBegin(GL_LINE_LOOP);
+        glVertex2i(10,360);
+        glVertex2i(10,385);
+        glVertex2i(40,335);
+        glVertex2i(50,290);
+    glEnd();
+    glPopMatrix();
+}
+
+void texts()
+{
+    glColor3f(1.0, 1.0, 1.0);
+    //glScalef(2,2,2);
+    if(counter>400&& counter<800)
+        drawstring(160, 250, 0.0, "Hi Sura..");
+    if(counter>800&& counter<1200)
+        drawstring(100, 250, 0.0, "You are such a slowCoach");
+
+    if(counter>2400&& counter<2800)
+        drawstring(180, 250, 0.0, "Ha ha ha");
+    if(counter>3200&& counter<3600)
+        drawstring(180, 250, 0.0, "Ok, done");
+
+    if(counter>1200&& counter<1600)
+        drawstring(150, 165, 0.0, "My dear friend! ");
+    if(counter>1600&& counter<2000)
+        drawstring(140, 165, 0.0, "You are so proud ");
+        glColor3f(1.0, 1.0, 1.0);
+    if(counter>2000&& counter<2400)
+        drawstring(160, 150, 0.0,"of your speed");
+    if(counter>2800&& counter<3200)
+        drawstring(150, 165, 0.0, "Lets have a race");
+
+
+
+    if (counter>17300){
+    glClear(GL_COLOR_BUFFER_BIT);
+    glColor3f(.8,0.9,1);
+    glPushMatrix();
+    glTranslatef(0, 0, 0);
+    glBegin(GL_POLYGON);
+        glVertex2i(0,0);
+        glVertex2i(700,0);
+        glVertex2i(700,1350);
+        glVertex2i(0,1350);
+    glEnd();
+    glPopMatrix();
+        glColor3f(0.0, 0.0, 1);
+
+        drawstring(240, 335, 0.0, "++++++++++++++++");
+        glColor3f(0.0, 0.0, 1);
+        drawstring(240, 350, 0.0, "+  Moral of this story +");
+        glColor3f(0.0, 0.0, 1);
+        drawstring(240, 365, 0.0, "++++++++++++++++");
+        glColor3f(0.0, 0.0, 1);
+        drawstring(215, 315, 0.0, "++++++++++++++++++++++++");
+        glColor3f(0.0, 0.0, 1);
+        drawstring(215, 300, 0.0, "+ Slow and steady wins the race +");
+        glColor3f(0.0, 0.0, 1);
+        drawstring(215, 285, 0.0, "++++++++++++++++++++++++");
+        glColor3f(1.0, 0, 1);
+        drawstring(400, 120, 0.0, "Group Member:");
+        glColor3f(1.0, 0, 1);
+        drawstring(400, 100, 0.0, "Kaleab Fekadu, ID No: UGR/8092/12");
+        glColor3f(1.0, 0, 1);
+        drawstring(400, 80, 0.0, "Atote Abreham, ID No: UGR/8092/12");
+        glColor3f(1.0, 0, 1);
+        drawstring(400, 60, 0.0, "Surafel Ifa, ID No: UGR/8092/12");
+        glColor3f(1.0, 0, 1);
+        drawstring(400, 40, 0.0, "Yordanos Mengstu, ID No: UGR/8092/12");
+        glColor3f(1.0, 0, 1);
+        drawstring(400, 20, 0.0, "RUET");
+    }
+
+
+}
+void display()
+{
+    glClear(GL_COLOR_BUFFER_BIT);
+
+    mountain();
+    sceenario();
+    sceenario2();
+
+    if(F==0){
+        starting();
+        //body2();
+        hare();
+    }
+    //body1();
+    if(F==1){
+       // sleeping_body2();
+
+        hare_sleep();
+
+    }
+    drawLeftCircle();
+
+    if(F==2){
+       // body2();
+        hare();
+        victory();
+        ba_posion=1500;
+    }
+
+
+
+ 
+
+    texts();
+
+    //hare();
+    glFlush();
+    glutPostRedisplay();
+    my_control_func();
+
+}
+
+int main(int argc, char **argv)
+{
+    glutInit(&argc , argv);
+    glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
+    glutInitWindowSize(1350,700);
+    glutCreateWindow("Slow and Steady wins the race");
+
+//    glutIdleFunc( Walk );
+
+    glutDisplayFunc(display);
+    //glutDisplayFunc(hare_walking);
+    myInit();
+    glutMainLoop();
+}
+
+
+
+void hare_walking()
+{
+    glClear(GL_COLOR_BUFFER_BIT);
+    glColor3f(0.7,1,0);
+
+    glPushMatrix();
+    glTranslatef(200, 250, 0);
+    glScalef(2,2,2);
+    /**Head-------------**/
+    glBegin(GL_POLYGON);
+        glVertex2i(-2,0);
+        glVertex2i(-2,2);
+
+        glVertex2i(0,4);
+
+        glVertex2i(3,7);
+        glVertex2i(5,8);
+        glVertex2i(7,8);
+        glVertex2i(9,7);
+        glVertex2i(11,10);
+        glVertex2i(13,12);
+        glVertex2i(15,13);
+        glVertex2i(18,14);
+        glVertex2i(20,14);
+        glVertex2i(21,13);
+        glVertex2i(20,12);
+
+
+        glVertex2i(14,8);
+        glVertex2i(25,12);
+        glVertex2i(26,12);
+        glVertex2i(27,11);
+        glVertex2i(27,10);
+        glVertex2i(25,8);
+        glVertex2i(22,5);
+        glVertex2i(15,3);
+        glVertex2i(14,1);
+        glVertex2i(7,-2);
+        glVertex2i(5,-3);
+        glVertex2i(1,-2);
+    glEnd();
+
+    //glScalef(2,2,2);
+    glBegin(GL_POLYGON);
+    glVertex2i(48,-15);
+    glVertex2i(50,-5);
+    glVertex2i(47,0);
+    glVertex2i(43,5);
+    glVertex2i(40,7);
+    glVertex2i(38,8);
+    glVertex2i(35,8);
+    glVertex2i(30,7);
+        glVertex2i(25,5);
+        //glVertex2i(20,3);
+        glVertex2i(14,1);
+        glVertex2i(7,-2);
+        glVertex2i(10,-5);
+        glVertex2i(13,-12);
+        glVertex2i(15,-14);
+        glVertex2i(19,-18);
+        glVertex2i(25,-20);
+        glVertex2i(40,-20);
+        glVertex2i(43,-15);
+        //glVertex2i(5,-10);
+        //glVertex2i(48,-5);
+        //glVertex2i(46,0);
+
+
+    glEnd();
+
+    //glScalef(2,2,2);
+//    glColor3f()
+
+
+
+    glPopMatrix();
+    glFlush();
+
+}
+
+
+void cloud(){
+
+ float scale_cloud=.3;
+ int trns_x=-1000;
+ int trns_y=1150;
+
+ glColor3f(0.8,.9,1);
+
+    /**-----------------Cloud 1---------------**/
+    
