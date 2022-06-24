@@ -872,11 +872,11 @@ void texts()
         glColor3f(1.0, 0, 1);
         drawstring(400, 100, 0.0, "Kaleab Fekadu, ID No: UGR/8092/12");
         glColor3f(1.0, 0, 1);
-        drawstring(400, 80, 0.0, "Atote Abreham, ID No: UGR/8092/12");
+        drawstring(400, 80, 0.0, "Atote Abreham, ID No: UGR/8839/12");
         glColor3f(1.0, 0, 1);
-        drawstring(400, 60, 0.0, "Surafel Ifa, ID No: UGR/8092/12");
+        drawstring(400, 60, 0.0, "Surafel Ifa, ID No: UGR/9118/12");
         glColor3f(1.0, 0, 1);
-        drawstring(400, 40, 0.0, "Yordanos Mengstu, ID No: UGR/8092/12");
+        drawstring(400, 40, 0.0, "Yordanos Mengstu, ID No: UGR/9031/12");
         glColor3f(1.0, 0, 1);
         drawstring(400, 20, 0.0, "RUET");
     }
