@@ -406,8 +406,8 @@ void sceenario()
     glTranslatef(0, 0, 0);
     glBegin(GL_POLYGON);
         glVertex2i(0,20);
-        glVertex2i(700,20);
-        glVertex2i(700,0);
+        glVertex2i(70,20);
+        glVertex2i(70,0);
         glVertex2i(0,0);
     glEnd();
     glPopMatrix();
